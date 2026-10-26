@@ -1,7 +1,22 @@
 <!doctype html>
+<html lang="es">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Volviendo a la app…</title>
-<script>
-  location.replace("mitesla://callback" + location.search);
-</script>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; text-align: center; padding: 48px 24px; }
+  a { display: inline-block; margin-top: 16px; padding: 12px 24px; border-radius: 10px;
+      background: #3478f6; color: #fff; text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
 <p>Volviendo a la app…</p>
+<a id="back" href="#">Volver a la app</a>
+<script>
+  var target = "mitesla://callback" + location.search;
+  document.getElementById("back").href = target;
+  location.replace(target);
+</script>
+</body>
+</html>
